@@ -70,7 +70,5 @@ public class MagicS {
             }
             System.out.println();
         }
-
     }
-
 }
