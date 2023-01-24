@@ -41,8 +41,11 @@ public class MagicS {
             number++;
 
             //Navigating
-            row--; int rw = row;
-            col++; int cl = col;
+            int rw = row;
+            int cl = col;
+
+            row--; 
+            col++; 
 
             //Setting position
             if(row == -1){
@@ -53,7 +56,7 @@ public class MagicS {
             }
 
             //In case of being successor of a multiple of N
-            if(isMultiple(matrix[row][col], n)){
+            if((matrix[row][col] - 1) % n == 0){
                 row = rw + 1;
                 col = cl;
             }
@@ -70,12 +73,4 @@ public class MagicS {
 
     }
 
-    public boolean isMultiple(int number1, int number2){
-        
-        if((number1 - 1) % number2 == 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
 }
